@@ -11,7 +11,7 @@ app.get('/',(req,res)=>{
 
 app.get('/Demo',(req,res)=>{
     console.log('IN RENDER AREA')
-    res.render('index.pug',{
+    res.render('restaurDemo/layout',{
         pageTitle:'Paninos',
         isauthenticated: true,
         pageHeader:'HOME'
