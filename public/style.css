@@ -9,3 +9,23 @@ h1{
 .unathor{
     color: blueviolet;
 }
+
+header{
+    background-color: rgb(177, 173, 181);
+}
+footer{
+    background-color: blueviolet;
+}
+ul{
+    display: flex;
+    justify-content: flex-start;
+    gap: 4rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
