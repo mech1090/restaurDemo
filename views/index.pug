@@ -1,9 +1,16 @@
 html(lang='en')
     head 
-        title = pageTitle
+        title=pageTitle
         link(rel="stylesheet", href="style.css")
         script(
             type:'text/javascript'
             src:script.js 
             defer
         ) 
+    body 
+        h1=pageHeader
+        div
+            if isauthenticated 
+                p.author user granted access 
+            else 
+                p.unauthor user unauthorized

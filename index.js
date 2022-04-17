@@ -12,7 +12,10 @@ app.get('/',(req,res)=>{
 app.get('/Demo',(req,res)=>{
     console.log('IN RENDER AREA')
     res.render('index.pug',{
-        pageTitle : 'restaurant main page'
+        pageTitle:'Paninos',
+        isauthenticated: true,
+        pageHeader:'HOME'
+
     })
 })
 
