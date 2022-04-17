@@ -8,19 +8,14 @@ html(lang='en')
             defer
         ) 
     body
-        header 
-            ul 
-                li 
-                    a(href="#") link1 
-                li 
-                    a(href="#") link2   
+        include ./partials/header   
         h1=pageHeader
         div
             if isauthenticated 
                 p.author user granted access 
             else 
                 p.unauthor user unauthorized
-        footer 
-            p copyright 2022
-            p nodeclass 2022
+        include ./partials/footer
+    
+
         
