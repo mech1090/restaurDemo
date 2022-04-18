@@ -1,9 +1,12 @@
 h1{
-    color: blue;
+    color: greenyellow;
+    text-align: center;
 }
 
 .author{
-    color: aqua;
+    color: red;
+    text-align: center;
+    background-color:rgb(235, 244, 133);
 }
 
 .unathor{
@@ -14,12 +17,14 @@ header{
    
 }
 footer{
-    background-color: blueviolet;
+    background-color: rgb(234, 226, 241);
+    text-align: center;
+
 }
 ul{
     display: flex;
     justify-content: flex-start;
-    justify-content: center;
+    justify-content: right;
     gap: 4rem;
     list-style: none;
 }
@@ -42,5 +47,10 @@ ul{
 
 
 #bg{
-    background-color: rgb(206, 236, 206);
+    background-color: rgb(235, 244, 133);
+}
+
+.c{
+    color: red;
+    text-decoration-thickness: 10rem;
 }
