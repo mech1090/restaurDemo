@@ -11,7 +11,7 @@ h1{
 }
 
 header{
-    background-color: rgb(177, 173, 181);
+   
 }
 footer{
     background-color: blueviolet;
@@ -19,17 +19,28 @@ footer{
 ul{
     display: flex;
     justify-content: flex-start;
+    justify-content: center;
     gap: 4rem;
-}
-
-li{
     list-style: none;
 }
 
-a{
+.li-class > a {
+    color:green;
+    font-size: 20px;
+    text-decoration-line: none ;
     text-decoration: none;
+    
 }
 
+
+
+.li-class > a:hover {
+    color: blue;
+
+}
+
+
+
 #bg{
-    background-color: green;
+    background-color: rgb(206, 236, 206);
 }

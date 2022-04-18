@@ -14,9 +14,15 @@ app.get('/Demo',(req,res)=>{
     res.render('restaurDemo/layout',{
         pageTitle:'Paninos',
         isauthenticated: true,
-        pageHeader:'HOME'
+        pageHeader:'Gourmet Italian Grilled Sandwiches'
 
     })
+})
+
+
+app.get('/login',(req,res)=>{
+    console.log('IN LOGIN AREA')
+    res.render('login/layout1')
 })
 
 app.listen(3000,()=>{
