@@ -17,7 +17,6 @@ app.get('/Demo',(req,res)=>{
     console.log('IN RENDER AREA')
     res.render('restaurDemo/layout',{
         pageTitle:'Panini',
-        isauthenticated: true,
         pageHeader:'Gourmet Italian Grilled Sandwiches & More!'
 
     })
