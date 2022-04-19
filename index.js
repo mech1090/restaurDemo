@@ -22,9 +22,6 @@ app.get('/Demo',(req,res)=>{
     })
 })
 
-app.post('/register',(req,res)=>{
-    console.log(req.body)
-})
 
 app.get('/register',(req,res)=>{
     console.log('IN Register Area')
@@ -34,7 +31,9 @@ app.get('/register',(req,res)=>{
     
 })
 
-
+app.post('/register',(req,res)=>{
+    console.log(req.body)
+})
 
 
 app.listen(3000,()=>{
