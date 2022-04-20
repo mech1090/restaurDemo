@@ -1,6 +1,12 @@
 const express = require('express')
 const pug = require('pug')
 const app = express()
+const mongoose = require('mongoose')
+const res = require('express/lib/response')
+
+require('./db')
+
+
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
 
@@ -33,9 +39,16 @@ app.get('/register',(req,res)=>{
 
 app.post('/register',(req,res)=>{
     console.log(req.body)
+    res.render('register/layout1',{
+        pageHeader:'Gourmet Italian Grilled Sandwiches & More!'
+    })
+} 
+)
+
+mongoose.connection.once('open',()=>{
+    app.listen(3000,()=>{
+        console.log('Server is running on Port 3000')
+    })
+    console.log('Connection Successful')
 })
 
-
-app.listen(3000,()=>{
-    console.log('Server is running on Port 3000')
-})
