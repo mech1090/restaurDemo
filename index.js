@@ -3,6 +3,7 @@ const pug = require('pug')
 const app = express()
 const mongoose = require('mongoose')
 const res = require('express/lib/response')
+const {NOT_FOUND_MSG,PORT}  = require('./constants')
 
 require('./db')
 
@@ -46,8 +47,8 @@ app.post('/register',(req,res)=>{
 )
 
 mongoose.connection.once('open',()=>{
-    app.listen(3000,()=>{
-        console.log('Server is running on Port 3000')
+    app.listen(PORT,()=>{
+        console.log('Server is running on Port {$PORT}')
     })
     console.log('Connection Successful')
 })
