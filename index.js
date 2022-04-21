@@ -3,7 +3,8 @@ const pug = require('pug')
 const app = express()
 const mongoose = require('mongoose')
 const res = require('express/lib/response')
-const {NOT_FOUND_MSG,PORT}  = require('./constants')
+const {NOT_FOUND_MSG}  = require('./constants')
+require('dotenv').config()
 
 require('./db')
 
@@ -46,9 +47,11 @@ app.post('/register',(req,res)=>{
 } 
 )
 
+const PORT = process.env.PORT || 3000
+
 mongoose.connection.once('open',()=>{
     app.listen(PORT,()=>{
-        console.log('Server is running on Port {$PORT}')
+        console.log(`Server is running on Port ${PORT}`)
     })
     console.log('Connection Successful')
 })
