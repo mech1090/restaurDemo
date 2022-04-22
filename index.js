@@ -4,6 +4,8 @@ const app = express()
 const mongoose = require('mongoose')
 const res = require('express/lib/response')
 const {NOT_FOUND_MSG}  = require('./constants')
+const Validator = require('validatorjs')
+const Joi = require('joi')
 require('dotenv').config()
 
 require('./db')
@@ -46,6 +48,10 @@ app.post('/register',(req,res)=>{
     })
 } 
 )
+
+app.get('*',(req,res)=>{
+    res.status(404).send(NOT_FOUND_MSG)
+})
 
 const PORT = process.env.PORT || 3000
 
