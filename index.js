@@ -9,6 +9,7 @@ const Joi = require('joi')
 require('dotenv').config()
 const {authenic} = require('./middleware/authen')
 const register = require('./routes/registration')
+const home = require('./routes/home')
 
 require('./db')
 
@@ -17,6 +18,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
 app.use(authenic)
 app.use('/register',register)
+app.use('/home',home)
 
 
 app. set('view engine', 'pug')
@@ -26,20 +28,6 @@ app.set('views','./views')
 app.get('/',(req,res)=>{
     res.send('OK')
 })
-
-
-app.get('/Home',(req,res)=>{
-    console.log('IN RENDER AREA')
-    res.render('restaurDemo/layout',{
-        pageTitle:'Panini',
-        pageHeader:'Gourmet Italian Grilled Sandwiches & More!'
-
-    })
-})
-
-
-
-
 
 
 app.get('*',(req,res)=>{
