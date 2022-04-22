@@ -8,13 +8,15 @@ const Validator = require('validatorjs')
 const Joi = require('joi')
 require('dotenv').config()
 const {authenic} = require('./middleware/authen')
-app.use(authenic)
+const register = require('./routes/registration')
 
 require('./db')
 
 app.use(express.json())
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
+app.use(authenic)
+app.use('/register',register)
 
 
 app. set('view engine', 'pug')
@@ -26,7 +28,7 @@ app.get('/',(req,res)=>{
 })
 
 
-app.get('/Demo',(req,res)=>{
+app.get('/Home',(req,res)=>{
     console.log('IN RENDER AREA')
     res.render('restaurDemo/layout',{
         pageTitle:'Panini',
@@ -36,21 +38,9 @@ app.get('/Demo',(req,res)=>{
 })
 
 
-app.get('/register',(req,res)=>{
-    console.log('IN Register Area')
-    res.render('register/layout1',{
-        pageHeader:'Gourmet Italian Grilled Sandwiches & More!'
-    })
-    
-})
 
-app.post('/register',(req,res)=>{
-    console.log(req.body)
-    res.render('register/layout1',{
-        pageHeader:'Gourmet Italian Grilled Sandwiches & More!'
-    })
-} 
-)
+
+
 
 app.get('*',(req,res)=>{
     res.status(404).send(NOT_FOUND_MSG)
