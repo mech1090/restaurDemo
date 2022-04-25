@@ -1,12 +1,13 @@
 h1{
-    color: greenyellow;
+    color: red;
     text-align: center;
 }
+
 
 .author{
     color: red;
     text-align: center;
-    background-color:rgb(235, 244, 133);
+    background-color:black;
 }
 
 .unathor{
@@ -17,7 +18,7 @@ header{
    
 }
 footer{
-    background-color: rgb(234, 226, 241);
+    background-color: rgba(255, 200, 0, 0.984);
     text-align: center;
 
 }
@@ -27,10 +28,11 @@ ul{
     justify-content: right;
     gap: 4rem;
     list-style: none;
+
 }
 
 .li-class > a {
-    color:green;
+    color: black;
     font-size: 20px;
     text-decoration-line: none ;
     text-decoration: none;
@@ -40,7 +42,7 @@ ul{
 
 
 .li-class > a:hover {
-    color: blue;
+    color:greenyellow;
 
 }
 
@@ -50,9 +52,10 @@ ul{
     background-color: rgb(235, 244, 133);
 }
 
-.c{
+.line-class{
     color: red;
-    text-decoration-thickness: 10rem;
+    text-decoration-thickness: 100rem;
+    align-content: var();
 }
 
 /*

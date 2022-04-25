@@ -1,9 +1,20 @@
 const express = require('express')
 const router = express.Router()
+const Validator = require('validatorjs')
+const Joi = require('joi')
+
 const {NOT_FOUND_MSG}  = require('../constants')
 
 console.log('in Registration Area')
 
+//const {name, mobile, email, message} = req.body
+/*const data = {
+    name,
+    mobile,
+    email,
+    message
+}
+*/
 
 router.get('/',(req,res)=>{
     console.log('IN Register Area')
@@ -13,6 +24,8 @@ router.get('/',(req,res)=>{
     
 })
 
+
+
 router.post('/',(req,res)=>{
     console.log('inside post')
     console.log(req.body)
@@ -21,5 +34,9 @@ router.post('/',(req,res)=>{
     })
 } 
 )
+
+
+
+//router.post('/',registrationController.create)
 
 module.exports =    router

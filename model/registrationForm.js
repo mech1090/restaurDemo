@@ -6,16 +6,16 @@ const schemaDefination = {
     },
     email:{
         type:String,
-        required : [true,'name is Required']
+        required : [true,'Email is Required']
     },
     mobile:{
         type:Number,
-        required:[true,'name is Required']
+        required:[true,'mobile number is Required']
     },
     message:{
         type:String
     }
 }
-const productSchema = new mongoose.Schema(schemaDefination)
-const Product = mongoose.model('Product',productSchema)
-module.exports = Product
+const registrationSchema = new mongoose.Schema(schemaDefination)
+const Registration = mongoose.model('registrationForm',registrationSchema)
+module.exports = Registration
