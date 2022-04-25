@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const Validator = require('validatorjs')
-const Joi = require('joi')
+const registrationController = require('../controllers/register.controller')
+
 
 const {NOT_FOUND_MSG}  = require('../constants')
 
@@ -25,7 +25,7 @@ router.get('/',(req,res)=>{
 })
 
 
-
+/*
 router.post('/',(req,res)=>{
     console.log('inside post')
     console.log(req.body)
@@ -35,8 +35,8 @@ router.post('/',(req,res)=>{
 } 
 )
 
+*/
 
-
-//router.post('/',registrationController.create)
+router.post('/',registrationController.create)
 
 module.exports =    router
